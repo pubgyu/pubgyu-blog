@@ -301,8 +301,8 @@ export const faveMaskMotion = function(el, option) {
 
 		ctx.drawImage(offCanvas,0,0);
 
-		if(options.bgFadeIn) el.next().css('opacity', _percent);
-		if(options.bgFadeOut) el.next().css('opacity', 1-_percent);
+		if(options.bgFadeIn) el.parent().find('.svg-bg').css('opacity', _percent);
+		if(options.bgFadeOut) el.parent().find('.svg-bg').css('opacity', 1-_percent);
 
 		onScrollEvent && onScrollEvent.call(this,_percent);
 
