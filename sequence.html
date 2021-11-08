@@ -42,10 +42,10 @@ html,body {position:relative;width:100%;height:100%;margin:0;padding:0;}
 	</div>
 </body>
 <script type="module">
-import { faveScroll } from './js/pub-scroll.mjs';
-import { faveResize } from './js/pub-resize.mjs';
-import { faveSequence } from './js/sequence.mjs';
-import { faveSticky } from './js/pub-sticky.mjs';
+import { faveScroll } from './js/pub-scroll.js';
+import { faveResize } from './js/pub-resize.js';
+import { faveSequence } from './js/sequence.js';
+import { faveSticky } from './js/pub-sticky.js';
 $(function () {
 	// gui 제어
 	const gui = new dat.GUI({ autoPlace : false });
@@ -114,7 +114,7 @@ $(function () {
 
 	let motionInit = function() {
 		let _faveSequence = new faveSequence($('.sequence-motion'), {
-			imgSrc : '/assets/images/sequence/',
+			imgSrc : './images/sequence/',
 			fileName : 'canvas_img_000.jpg',
 			mobileFileName : 'why-galaxy-zflip-000.jpg',
 			frame : 50,
