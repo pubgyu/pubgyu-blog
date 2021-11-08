@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>car</title>
+
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/three/three.min.js"></script>
+	
+	<!-- 컨트롤 모듈 -->
+	<script src="./js/three/OrbitControls.js"></script>
+	<!-- Keyboard -->
+	<script src="./js/three/THREEx.KeyboardState.js"></script>
+
+	<!-- p5 -->
+	<script src="./js/p5.min.js"></script>
+	
+	<!-- GLTF Load 모듈 -->
+	<!-- <script src="/assets/threejs/js/three/GLTFLoader.js"></script> -->
+	<!-- gui controls 모듈 -->
+	<!-- <script src="/assets/threejs/js/three/dat.gui.min.js"></script> -->
+	<!-- stats -->
+	<!-- <script src="/assets/threejs/js/three/stats.min.js"></script> -->
+
+
+	<!-- Composer 이펙트 -->
+	<!-- <script src="/assets/threejs/js/three/effect/EffectComposer.js"></script> -->
+	<!-- <script src="/assets/threejs/js/three/effect/RenderPass.js"></script> -->
+	<!-- <script src="/assets/threejs/js/three/effect/ShaderPass.js"></script> -->
+	<!-- <script src="/assets/threejs/js/three/effect/CopyShader.js"></script> -->
+
+	<!-- <script src="/assets/threejs/js/three/effect/UnrealBloomPass.js"></script> -->
+	<!-- <script src="/assets/threejs/js/three/effect/LuminosityHighPassShader.js"></script> -->
+
+
+	<!-- 물리엔진 -->
+	<script src="./js/three/engine/physi.js"></script>
+	<!-- <script src="/assets/threejs/js/three/engine/simplex-noise.js"></script> -->
+
+	<script src="./js/pub-drive.js"></script>
+</head>
+<style>
+html,body {margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;}
+h1 {text-align:center;}
+canvas {display:block;width:100%;height:100%;margin:0 auto;}
+#wrap {position:relative;height:100%;background-color:#000;}
+#wrap > .webgl-wrap {position:relative;display:inline-block;position:relative;width:100%;}
+.goal-txt {position:absolute;top:-20%;left:50%;font-size:200px;color:#6600ff;z-index:1;transform:translate(-50%,-50%) rotate(-45deg);transition:all 1s;}
+.goal-txt.on {top:50%;transform:translate(-50%,-50%) rotate(0deg);}
+.level-wrap {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+.level-wrap > .tit {font-size:100px;color:#e73480;text-align:center;}
+.level-wrap > button {display:block;margin:20px auto 0;padding:20px 30px;border:1px solid #fff;border-radius:20px;background-color:transparent;font-size:20px;color:#fff;cursor:pointer;}
+</style>
+<body>
+	<div id="wrap">
+		<strong class="goal-txt">도착!!</strong>
+		<div class="webgl-wrap test1"></div>
+		<div class="level-wrap">
+			<strong class="tit">PUB DRIVE</strong>
+			<button data-level="1">Lv.1</button>
+			<button data-level="2">Lv.2</button>
+			<button data-level="3">Lv.3</button>
+			<button data-level="4">Lv.4</button>
+			<button data-level="5">Lv.5</button>
+		</div>
+	</div>
+</body>
+<script>
+$(function () {
+	threeMotion('.webgl-wrap');
+});
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
