@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Sequence</title>
+
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/dat.gui.min.js"></script>
+</head>
+<style>
+html,body {position:relative;width:100%;height:100%;margin:0;padding:0;}
+#wrap {position:relative;width:100%;height:100%;font-size:0;background-color:#000;}
+.sticky-wrap .fixed-inner canvas {position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;}
+.sticky-wrap .button-wrap {position:relative;z-index:12;}
+.sticky-wrap .svg-wrap {display:none;}
+.sticky-wrap .dg {position:relative;z-index:10;}
+
+.sticky-wrap {position:relative;height:5000px;box-sizing:border-box;}
+.fixed-inner {position:relative;top:0;width:100%;height:100vh;z-index:1;overflow:hidden;}
+.fixed-inner.o-sticky {position:sticky;}
+.fixed-inner.o-fixed {position:fixed;}
+.fixed-content {position:absolute;top:50%;left:0;width:100%;height:100%;background-color:#000;transform:translateY(-50%);}
+</style>
+<body>
+	<div id="wrap">
+		<article class="sticky-wrap">
+			<div class="fixed-inner">
+				<div class="fixed-content">
+					<div class="button-wrap">
+						<button class="svg-play">재생</button>
+						<button class="svg-play-reverse">역재생</button>
+						<button class="svg-pause">정지</button>
+						<button class="svg-destroy">파괴</button>
+						<button class="svg-init">생성</button>
+					</div>
+					<img class="test" src="" alt="">
+					<canvas class="sequence-motion"></canvas>
+				</div>
+			</div>
+		</article>
+	</div>
+</body>
+<script type="module">
+import { faveScroll } from './js/pub-scroll.mjs';
+import { faveResize } from './js/pub-resize.mjs';
+import { faveSequence } from './js/sequence.mjs';
+import { faveSticky } from './js/pub-sticky.mjs';
+$(function () {
+	// gui 제어
+	const gui = new dat.GUI({ autoPlace : false });
+	$('.sticky-wrap .fixed-content').append($(gui.domElement));
+
+	let 
+	_startFrame = 0,
+	_startPercent = 0,
+	_bgAlpha = false,
+	_autoPlay = false,
+	_scrollEase = 0.8,
+	_speed = 1,
+	_frameDivision = 1,
+	_frameEventStart = 0,
+	_targetBgAlphaFrame = 'null',
+	sequenceScrollTrue = false;
+
+	const lightControl = {
+		startFrame : _startFrame,
+		startPercent : _startPercent,
+		bgAlpha : _bgAlpha,
+		targetBgAlphaFrame : _targetBgAlphaFrame,
+		autoPlay : _autoPlay,
+		speed : _speed,
+		frameDivision : _frameDivision,
+		frameEventStart : _frameEventStart,
+		ease : _scrollEase
+	}
+	gui.add(lightControl, 'startFrame', 0, 50).step(1).onChange(function (val){
+		_startFrame = val;
+		motionInit();
+	});
+	gui.add(lightControl, 'startPercent', 0, 1).step(0.1).onChange(function (val){
+		_startPercent = val;
+		motionInit();
+	});
+	gui.add(lightControl, 'frameDivision', 0, 5).step(1).onChange(function (val){
+		_frameDivision = val;
+		motionInit();
+	});
+	gui.add(lightControl, 'speed', 0, 100).step(1).onChange(function (val){
+		_speed = val;
+		motionInit();
+	});
+	gui.add(lightControl, 'ease', 0, 0.99).step(0.01).onChange(function (val){
+		_scrollEase = val;
+		motionInit();
+	});
+	gui.add(lightControl, 'frameEventStart', 0, 50).step(1).onChange(function (val){
+		_frameEventStart = val;
+		motionInit();
+	});
+	gui.add(lightControl, 'bgAlpha').onChange(function (val){
+		_bgAlpha = val;
+		if (val) _targetBgAlphaFrame = null;
+		motionInit();
+	});
+	gui.add(lightControl, 'targetBgAlphaFrame').onChange(function (val){
+		_targetBgAlphaFrame = val;
+		motionInit();
+	});
+	gui.add(lightControl, 'autoPlay').onChange(function (val){
+		_autoPlay = val;
+		motionInit();
+	});
+
+	let motionInit = function() {
+		let _faveSequence = new faveSequence($('.sequence-motion'), {
+			imgSrc : '/assets/images/sequence/',
+			fileName : 'canvas_img_000.jpg',
+			mobileFileName : 'why-galaxy-zflip-000.jpg',
+			frame : 50,
+			frameDivision : _frameDivision,
+			startFrame : _startFrame,
+			autoPlay : _autoPlay,
+			speed : _speed,
+			bgAlpha : _bgAlpha,
+			targetBgAlphaFrame : _targetBgAlphaFrame,
+			startPercent : _startPercent,
+			preLoadImg : [10,20,30,40,50],
+			frameEventStart : _frameEventStart,
+			loadEvent : function () {
+				console.log('로드 완료');
+			},
+			frameInEvent : function () {
+				console.log('이벤트 IN');
+			},
+			frameOutEvent : function () {
+				console.log('이벤트 OUT');
+			}
+		});
+
+		_faveSequence.init();
+		$('.svg-init').off('click').on('click', function () {
+			_faveSequence.init();
+			sequenceScrollTrue = true;
+		});
+		$('.svg-destroy').off('click').on('click', function () {
+			_faveSequence.destroy();
+		});
+		$('.svg-play').off('click').on('click', function () {
+			if(_autoPlay) _faveSequence.play();
+		});
+		$('.svg-play-reverse').off('click').on('click', function () {
+			if(_autoPlay) _faveSequence.reversePlay();
+		});
+		$('.svg-pause').off('click').on('click', function () {
+			if(_autoPlay) _faveSequence.pause();
+		});
+		if(!_autoPlay) {
+			$(window).off('scroll.raf').on('scroll.raf', faveScroll(_faveSequence.scroll, _scrollEase));
+		}else {
+			$(window).off('scroll.raf');
+		}
+		$(window).on('resize' ,faveResize(_faveSequence.resize,300));
+	}
+	motionInit();
+
+	let _faveSticky = new faveSticky($('.sticky-wrap'), {
+		minHeight : 320,
+		maxHeightM : 640,
+		maxHeight : 1257,
+		scrollEvent : function (_percent) {
+			
+		}
+	});
+	$(window).on('scroll', faveScroll(_faveSticky.scroll));
+  	$(window).on('resize', faveResize(_faveSticky.resize, 300));
+});
+</script>
+</html>	
