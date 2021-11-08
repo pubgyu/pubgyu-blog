@@ -144,7 +144,7 @@ $(function () {
 	_bgColor = '#ffffff',
 	_scrollEase = 0.92,
 	_motionType = 's',
-	_horizontal = true,
+	_svgSrc = true,
 	_startPercent = 0;
 
 	const lightControl = {
@@ -164,11 +164,11 @@ $(function () {
 		bgFadeOut : _bgFadeOut,
 		reverse : _reverse,
 		motionType : _motionType,
-		horizontal : _horizontal,
+		svgSrc : _svgSrc,
 		startPercent : _startPercent
 	}
-	gui.add(lightControl, 'horizontal').onChange(function (val){
-		_horizontal = val;
+	gui.add(lightControl, 'svgSrc').onChange(function (val){
+		_svgSrc = val;
 		motionInit();
 	});
 	gui.add(lightControl, 'minScale', 0, 50).step(0.1).onChange(function (val){
@@ -246,13 +246,13 @@ $(function () {
 		let svgimgVH;
 		let svgNode;
 
-		svgNode = (_horizontal) ? $('.svg-wrap.x-svg') : $('.svg-wrap.y-svg');
+		svgNode = (_svgSrc) ? $('.svg-wrap.x-svg') : $('.svg-wrap.y-svg');
 		svgimg = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgNode.html());
 		svgimgVW = svgNode.find('svg').attr('width');
 		svgimgVH = svgNode.find('svg').attr('height');
 
 		svgCanvasMotion = new faveMaskMotion($('.sticky-wrap .svg-motion'), {
-			horizontal : svgimg,
+			svgSrc : svgimg,
 			bgImgSrc : './images/space.jpg',
 			moveNode : $('.sticky-wrap'),
 			autoPlay : _autoPlay,
