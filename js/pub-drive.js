@@ -59,7 +59,7 @@ const threeMotion = (el,lv) => {
 	_orbitControls.dampingFactor = 0.05; //댐핑 관성
 
 	_orbitControls.domElement.addEventListener( 'mousedown', function (e) {
-		console.log('aaaa');
+		// console.log('aaaa');
 	});
 }
 
@@ -206,7 +206,7 @@ const starModel = (num) => {
 }
 
 const groundModel = () => {
-	console.log('ground');
+	// console.log('ground');
 	let groundGeo = new THREE.BoxGeometry(mapBlockW,mapBlockW,1);
 	let groundMaterial = Physijs.createMaterial(
 		new THREE.MeshLambertMaterial({color: 0x3a3a3a, shininess: 150}),
