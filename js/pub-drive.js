@@ -1,5 +1,5 @@
-Physijs.scripts.ammo = 'js/three/engine/ammo.js';
-Physijs.scripts.worker = 'js/three/engine/physijs_worker.js';
+Physijs.scripts.ammo = './js/three/engine/ammo.js';
+Physijs.scripts.worker = 'physijs_worker.js';
 
 const $scene = new Physijs.Scene
 // const $scene = new THREE.Scene;
