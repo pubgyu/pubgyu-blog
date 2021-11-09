@@ -205,19 +205,15 @@ const starModel = (num) => {
 	}
 }
 
-let groundMaterial;
-let groundMaterial2;
 const groundModel = () => {
-	$scene.remove(groundMaterial);
-	$scene.remove(groundMaterial2);
 	// console.log('ground');
 	let groundGeo = new THREE.BoxGeometry(mapBlockW,mapBlockW,1);
-	groundMaterial = Physijs.createMaterial(
+	let groundMaterial = Physijs.createMaterial(
 		new THREE.MeshLambertMaterial({color: 0x3a3a3a, shininess: 150}),
 		5, // 높은 마찰계수
 		1 // 낮은 회복
 	);
-	groundMaterial2 = Physijs.createMaterial(
+	let groundMaterial2 = Physijs.createMaterial(
 		new THREE.MeshLambertMaterial({color: 0xe74f4f, shininess: 150}),
 		5, // 높은 마찰계수
 		1 // 낮은 회복
