@@ -37,6 +37,8 @@ const threeMotion = (el,lv) => {
 	$renderer.setSize(window.innerWidth,window.innerHeight);
 	$renderer.shadowMap.enabled = true;
 
+	starModel(200);
+
 	_orbitControls = new THREE.OrbitControls($camera, $renderer.domElement);
 	_orbitControls.rotateSpeed = 0.05;
 	_orbitControls.autoRotate = true; // 자동 rotate _controls.update()이거 사용해야 한다
@@ -351,7 +353,6 @@ $(function () {
 		$('.level-wrap').remove();
 		
 		mapSetting(lv);
-		starModel(200);
 		groundModel();
 
 		carModel.body();
