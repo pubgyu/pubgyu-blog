@@ -45,7 +45,7 @@ const threeMotion = (el,lv) => {
 	// carModel.wheel();
 	// carModel.light();
 
-	requestRender();
+	// requestRender();
 	_orbitControls = new THREE.OrbitControls($camera, $renderer.domElement);
 	_orbitControls.rotateSpeed = 0.05;
 	_orbitControls.autoRotate = true; // 자동 rotate _controls.update()이거 사용해야 한다
@@ -364,6 +364,8 @@ $(function () {
 		carModel.body();
 		carModel.wheel();
 		carModel.light();
+
+		requestRender();
 
 		_orbitControls.enableZoom = true;
 		_orbitControls.autoRotate = false;
