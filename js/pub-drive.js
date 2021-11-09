@@ -37,6 +37,7 @@ const threeMotion = (el,lv) => {
 	$renderer.setSize(window.innerWidth,window.innerHeight);
 	$renderer.shadowMap.enabled = true;
 
+	mapSetting(0);
 	starModel(200);
 
 	_orbitControls = new THREE.OrbitControls($camera, $renderer.domElement);
