@@ -39,7 +39,7 @@ const threeMotion = (el,lv) => {
 
 	mapSetting(0);
 	starModel(200);
-	groundModel();
+	groundModel(0);
 
 	carModel.body();
 	carModel.wheel();
@@ -205,16 +205,16 @@ const starModel = (num) => {
 	}
 }
 
-const groundModel = () => {
+const groundModel = (_shininess) => {
 	// console.log('ground');
 	let groundGeo = new THREE.BoxGeometry(mapBlockW,mapBlockW,1);
 	let groundMaterial = Physijs.createMaterial(
-		new THREE.MeshLambertMaterial({color: 0x3a3a3a, shininess: 150}),
+		new THREE.MeshLambertMaterial({color: 0x3a3a3a, shininess: _shininess}),
 		5, // 높은 마찰계수
 		1 // 낮은 회복
 	);
 	let groundMaterial2 = Physijs.createMaterial(
-		new THREE.MeshLambertMaterial({color: 0xe74f4f, shininess: 150}),
+		new THREE.MeshLambertMaterial({color: 0xe74f4f, shininess: _shininess}),
 		5, // 높은 마찰계수
 		1 // 낮은 회복
 	);
@@ -359,7 +359,7 @@ $(function () {
 		let lv = $(this).data('level');
 		$('.level-wrap').remove();
 		mapSetting(lv);
-		groundModel();
+		groundModel(150);
 		_orbitControls.enableZoom = true;
 		_orbitControls.autoRotate = false;
 	});
