@@ -41,9 +41,9 @@ const threeMotion = (el,lv) => {
 	starModel(200);
 	groundModel();
 
-	carModel.body();
-	carModel.wheel();
-	carModel.light();
+	// carModel.body();
+	// carModel.wheel();
+	// carModel.light();
 
 	requestRender();
 	_orbitControls = new THREE.OrbitControls($camera, $renderer.domElement);
@@ -360,6 +360,11 @@ $(function () {
 		$('.level-wrap').remove();
 		mapSetting(lv);
 		groundModel();
+
+		carModel.body();
+		carModel.wheel();
+		carModel.light();
+
 		_orbitControls.enableZoom = true;
 		_orbitControls.autoRotate = false;
 	});
