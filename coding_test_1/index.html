@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>coding test1</title>
+</head>
+<link rel="stylesheet" href="./tool.css">
+<body>
+	<article id="wrap">
+		<h1>이미지 검수툴</h1>
+		
+		<figure class="img-wrap"></figure>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn-approval" onClick="imgCheckTool.checkApproval();">승인</button>
+			<button type="button" class="btn-refusal" onClick="imgCheckTool.refusalCheck();">거절</button>
+		</div>
+
+		<div class="input-wrap">
+			<input class="input-refusal" type="text" placeholder="거절사유" disabled onkeyUp="imgCheckTool.refusalMessage(event.target.value);">
+				<button type="button" class="btn-refusal-confirm" disabled onClick="imgCheckTool.checkRefusal();">거절 확인</button>
+		</div>
+
+		<div class="result-btn-wrap">
+			<button type="button" onClick="imgCheckTool.getAllImgInfo();">모든 이미지</button>
+			<button type="button" onClick="imgCheckTool.getApprovalImgInfo();">승인한 이미지</button>
+			<button type="button" onClick="imgCheckTool.getRefusalImgInfo();">거절한 이미지</button>		
+			<span class="target-input-wrap">
+				<input class="input-id" type="text" placeholder="특정 이미지"><button type="button" onClick="imgCheckTool.getTargetImgInfo(document.querySelector('.input-id').value);">이미지 확인</button>
+			</span>
+		</div>
+	</article>
+</body>
+<script src="./tool.js"></script>
+</html>
