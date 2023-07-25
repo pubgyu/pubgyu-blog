@@ -9,7 +9,7 @@ window.storyLottieAni2 = lottie.loadAnimation({
   rendererSettings: {
     className: 'lottie-svg'
   },
-  path: '/assets/json/story/intro2.json'
+  path: './assets/json/story/intro2.json'
 });
 window.storyLottieAni2M = lottie.loadAnimation({
   container: storyLottie2M,
@@ -19,12 +19,12 @@ window.storyLottieAni2M = lottie.loadAnimation({
   rendererSettings: {
     className: 'lottie-svg-mobile'
   },
-  path: '/assets/json/story/intro2_m.json'
+  path: './assets/json/story/intro2_m.json'
 });
 window.storyLottieAni4 = lottie.loadAnimation({
   container: storyLottie4,
   renderer: 'canvas',
   loop: false,
   autoplay: false,
-  path: '/assets/json/story/wave.json'
+  path: './assets/json/story/wave.json'
 });
