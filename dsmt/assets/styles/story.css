@@ -39,16 +39,16 @@ textarea{resize:vertical}
 body{-webkit-tap-highlight-color:transparent;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-overflow-scrolling:touch}
 button{border:0;padding:0;background:0 0;cursor:pointer}
 a{text-decoration:none;color:inherit}
-@font-face{font-family:"Sequel 100 Wide 75";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/Sequel100Wide-75.woff2) format("woff2"),url(/assets/fonts/Sequel100Wide-75.woff) format("woff"),url(/assets/fonts/Sequel100Wide-75.svg#Sequel100Wide-75) format("svg")}
-@font-face{font-family:"Sequel Sans Headline";font-style:normal;font-weight:300;font-display:swap;src:url(/assets/fonts/SequelSans-HeadlineBold.woff2) format("woff2"),url(/assets/fonts/SequelSans-HeadlineBold.woff) format("woff"),url(/assets/fonts/SequelSans-HeadlineBold.svg#SequelSans-HeadlineBold) format("svg")}
-@font-face{font-family:"Sequel Sans Headline Semi";font-style:normal;font-weight:300;font-display:swap;src:url(/assets/fonts/SequelSans-HeadlineSemi.woff) format("woff")}
-@font-face{font-family:"Sequel Sans Headline Medium";font-style:normal;font-weight:300;font-display:swap;src:url(/assets/fonts/SequelSans-HeadlineMedium.woff) format("woff")}
-@font-face{font-family:"Sandoll Gothic Neo";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/SDGothicNeoaUniTTF-dRg.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/SDGothicNeoaUniTTF-dRg.woff2) format("woff2"),url(/assets/fonts/SDGothicNeoaUniTTF-dRg.woff) format("woff")}
-@font-face{font-family:"Sandoll Gothic Neo";font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/SDGothicNeoaUniTTF-fSb.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/SDGothicNeoaUniTTF-fSb.woff2) format("woff2"),url(/assets/fonts/SDGothicNeoaUniTTF-fSb.woff) format("woff")}
-@font-face{font-family:"Sandoll Gothic Neo";font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/SDGothicNeoaUniTTF-hEb.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/SDGothicNeoaUniTTF-hEb.woff2) format("woff2"),url(/assets/fonts/SDGothicNeoaUniTTF-hEb.woff) format("woff")}
-@font-face{font-family:"Nanum Pen Script";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/NanumPen.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/NanumPen.woff2) format("woff2"),url(/assets/fonts/NanumPen.woff) format("woff")}
-@font-face{font-family:"Noto Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/NotoSans.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/NotoSans.woff2) format("woff2"),url(/assets/fonts/NotoSans.woff) format("woff")}
-@font-face{font-family:"Noto Sans";font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/NotoSans-Bold.woff2) format("woff2"),url(/assets/fonts/NotoSans-Bold.woff) format("woff")}
+@font-face{font-family:"Sequel 100 Wide 75";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/Sequel100Wide-75.woff2) format("woff2"),url(assets/fonts/Sequel100Wide-75.woff) format("woff"),url(assets/fonts/Sequel100Wide-75.svg#Sequel100Wide-75) format("svg")}
+@font-face{font-family:"Sequel Sans Headline";font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/SequelSans-HeadlineBold.woff2) format("woff2"),url(assets/fonts/SequelSans-HeadlineBold.woff) format("woff"),url(assets/fonts/SequelSans-HeadlineBold.svg#SequelSans-HeadlineBold) format("svg")}
+@font-face{font-family:"Sequel Sans Headline Semi";font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/SequelSans-HeadlineSemi.woff) format("woff")}
+@font-face{font-family:"Sequel Sans Headline Medium";font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/SequelSans-HeadlineMedium.woff) format("woff")}
+@font-face{font-family:"Sandoll Gothic Neo";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/SDGothicNeoaUniTTF-dRg.eot?#iefix) format("embedded-opentype"),url(assets/fonts/SDGothicNeoaUniTTF-dRg.woff2) format("woff2"),url(assets/fonts/SDGothicNeoaUniTTF-dRg.woff) format("woff")}
+@font-face{font-family:"Sandoll Gothic Neo";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/SDGothicNeoaUniTTF-fSb.eot?#iefix) format("embedded-opentype"),url(assets/fonts/SDGothicNeoaUniTTF-fSb.woff2) format("woff2"),url(assets/fonts/SDGothicNeoaUniTTF-fSb.woff) format("woff")}
+@font-face{font-family:"Sandoll Gothic Neo";font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/SDGothicNeoaUniTTF-hEb.eot?#iefix) format("embedded-opentype"),url(assets/fonts/SDGothicNeoaUniTTF-hEb.woff2) format("woff2"),url(assets/fonts/SDGothicNeoaUniTTF-hEb.woff) format("woff")}
+@font-face{font-family:"Nanum Pen Script";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/NanumPen.eot?#iefix) format("embedded-opentype"),url(assets/fonts/NanumPen.woff2) format("woff2"),url(assets/fonts/NanumPen.woff) format("woff")}
+@font-face{font-family:"Noto Sans";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/NotoSans.eot?#iefix) format("embedded-opentype"),url(assets/fonts/NotoSans.woff2) format("woff2"),url(assets/fonts/NotoSans.woff) format("woff")}
+@font-face{font-family:"Noto Sans";font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"),url(assets/fonts/NotoSans-Bold.woff2) format("woff2"),url(assets/fonts/NotoSans-Bold.woff) format("woff")}
 a,body,button,input,select,textarea{font-family:"Sandoll Gothic Neo",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body{position:relative;overflow-x:hidden;margin:0 auto;word-break:break-word}
 legend{position:absolute;top:-9999px;left:-9999px;width:0;height:0;font-size:0;overflow:hidden;visibility:hidden}
@@ -1137,9 +1137,9 @@ html.ie .sticky-wrap.sticky2 .page-dimmed{will-change:auto}
 @media screen and (max-width:767px){
 .sticky-wrap.sticky3{height:5000px}
 }
-.sticky-wrap.sticky3 .sticky-con .d-video-content{background-image:url(/assets/images/story/story-video-cover01.jpg);background-size:auto 125vh!important}
+.sticky-wrap.sticky3 .sticky-con .d-video-content{background-image:url(assets/images/story/story-video-cover01.jpg);background-size:auto 125vh!important}
 @media screen and (max-width:767px){
-.sticky-wrap.sticky3 .sticky-con .d-video-content{background-image:url(/assets/images/story/story-video-cover01_m.jpg);background-size:100vw auto!important}
+.sticky-wrap.sticky3 .sticky-con .d-video-content{background-image:url(assets/images/story/story-video-cover01_m.jpg);background-size:100vw auto!important}
 }
 .sticky-wrap.sticky3 .message-txt.message1{top:50%;left:50%;margin-top:-9px;mix-blend-mode:inherit;text-align:center;opacity:1;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 @media screen and (max-width:767px){
@@ -1196,9 +1196,9 @@ html.ie .sticky-wrap.sticky2 .page-dimmed{will-change:auto}
 }
 html.ie10 .sticky-wrap.sticky7 .page-dimmed{display:none}
 .sticky-wrap.sticky8 .change-bg{position:absolute;top:0;left:0;display:block;width:100%;height:100%;opacity:0;background-color:#000}
-.sticky-wrap.sticky8 .d-video-content{opacity:0;z-index:5;-webkit-transform:translate(-50%,-50%) scale(.399);transform:translate(-50%,-50%) scale(.399);-webkit-transform-origin:center center;transform-origin:center center;background-image:url(/assets/images/story/story-video-cover02.jpg)}
+.sticky-wrap.sticky8 .d-video-content{opacity:0;z-index:5;-webkit-transform:translate(-50%,-50%) scale(.399);transform:translate(-50%,-50%) scale(.399);-webkit-transform-origin:center center;transform-origin:center center;background-image:url(assets/images/story/story-video-cover02.jpg)}
 @media screen and (max-width:767px){
-.sticky-wrap.sticky8 .d-video-content{background-image:url(/assets/images/story/story-video-cover02_m.jpg)}
+.sticky-wrap.sticky8 .d-video-content{background-image:url(assets/images/story/story-video-cover02_m.jpg)}
 }
 .sticky-wrap.sticky8 .d-video-content .d-video{top:50%;left:50%;width:auto;height:auto;min-width:100%;min-height:100%;max-width:inherit;max-height:inherit;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 @media screen and (max-width:767px){
@@ -1237,9 +1237,9 @@ html.ie .sticky-wrap.sticky9 .page-dimmed{will-change:auto}
 .sticky-wrap.fellowship-film .change-bg{position:absolute;top:0;left:0;display:block;width:100%;height:100%;opacity:0;background-color:#000}
 .sticky-wrap.fellowship-film .video-does-text{-webkit-transform:scale(.634);transform:scale(.634);-webkit-transform-origin:center center;transform-origin:center center}
 html.android .sticky-wrap.fellowship-film .video-does-text .video-con{left:0}
-.sticky-wrap.fellowship-film .video-does-text .d-video-content{width:100vh;border-radius:100%;background-image:url(/assets/images/story/story-video-cover03.jpg);background-size:auto 125vh!important}
+.sticky-wrap.fellowship-film .video-does-text .d-video-content{width:100vh;border-radius:100%;background-image:url(assets/images/story/story-video-cover03.jpg);background-size:auto 125vh!important}
 @media screen and (max-width:767px){
-.sticky-wrap.fellowship-film .video-does-text .d-video-content{background-image:url(/assets/images/story/story-video-cover03_m.jpg);background-size:100vw auto!important}
+.sticky-wrap.fellowship-film .video-does-text .d-video-content{background-image:url(assets/images/story/story-video-cover03_m.jpg);background-size:100vw auto!important}
 }
 .sticky-wrap.fellowship-film .video-does-text .d-video-content .video-wrap{position:absolute;top:50%;left:50%;width:100vw;max-width:1920px;height:100vh;height:calc(var(--vh,1vh));z-index:1;-webkit-transform:translate(-50%,-50%) scale(.8);transform:translate(-50%,-50%) scale(.8)}
 .sticky-wrap.fellowship-film .video-does-text .d-video-content .dimmed{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;background-color:#000}
