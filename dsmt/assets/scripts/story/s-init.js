@@ -79,7 +79,8 @@ startLottie.addEventListener("DOMLoaded", function () {
   horizontalGuide();
   function dataAnimation() {
     startLottie.goToAndStop(ff, true);
-    if (ff <= loadFrame) {
+    // if (ff <= loadFrame) {
+    if (ff <= 90) {
       if (window.innerWidth > 767) {
         ff += .3;
       } else {
