@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <link rel="shortcut icon" href="/assets/images/common/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/common/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/common/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/common/favicon-16x16.png" />
+    <title>Kakao Impact</title>
+    <link rel="preload" href="/assets/fonts/SDGothicNeoaUniTTF-dRg.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="/assets/fonts/SDGothicNeoaUniTTF-fSb.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="/assets/fonts/SDGothicNeoaUniTTF-hEb.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="/assets/fonts/Sequel100Wide-75.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/styles/style.css" />
+    <link rel="stylesheet" href="/assets/styles/guide.css" />
+  </head>
+  <body>
+    <style>
+      #dsmtContents .contents-inner {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+      .tab-wrap {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .tab-wrap a {
+        display: inline-block;
+        margin: 5px;
+        border: 1px solid #000;
+        padding: 5px 10px;
+        font-weight: bold;
+      }
+      .tab-wrap a.cur {
+        background-color: #000;
+        color: #fff;
+      }
+      .tab-contents>div {
+        display: none;
+      }
+      .tab-contents>div.cur {
+        display: block;
+      }
+    </style>
+
+    <!-- 
+  스토리 메인 : data-type="story"
+  GNB Light 타입 : data-color-type="bright"
+  GNB 배경 투명한 타입 : data-bg-type="transparent"
+-->
+    <div class="skip-to-content-link">
+      <a href="#pageKeytit">본문 바로가기</a>
+      <a href="#dsmtGnb">메뉴 바로가기</a>
+    </div>
+    <header id="dsmtHeader">
+      <h1 class="blind">DSMT Kakao Impact
+      </h1>
+      <div class="header-wrap">
+        <nav class="header-inner" aria-labelledby="global-navigation">
+          <a class="gnb-home" href="/">HOME</a>
+          <button type="button" class="btn-gnb-open"><span class="blind">메인메뉴 펼치기</span></button>
+          <div id="dsmtGnb">
+            <button type="button" class="btn-gnb-close"><span class="blind">메인메뉴 닫기</span></button>
+            <ul class="gnb">
+              <li><a href="/fellowship/">펠로우십</a></li>
+              <li><a href="/together/">같이가치</a></li>
+              <li><a href="/kakaoimpact/">카카오임팩트</a></li>
+            </ul>
+            <div class="language">
+              <a href="/index_en.html" class="badge-item en theme-dark" data-type="lang" title="영어로 보기">ENG</a>
+            </div>
+            <div class="language-area">
+              <a href="/index_en.html" title="영어로 보기">ENG</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div id="dsmtContents" data-bg-type="gray">
+      <div class="contents-inner">
+        <div class="tab-wrap">
+          <a href="#typo">Typography</a>
+          <a href="#button">Button</a>
+          <a href="#dropdown">Dropdown</a>
+          <a href="#textfield">Textfield</a>
+          <a href="#title">Title</a>
+          <a href="#badge">Badge</a>
+          <a href="#listimage">List - Image</a>
+          <a href="#listtext">List - Text</a>
+          <a href="#pagination">Pagination</a>
+          <a href="#loadingpage">Loading</a>
+          <a href="#utility">Utility Page</a>
+        </div>
+        <div class="tab-contents">
+          <div id="typo">
+            <style>
+              .typo-wrap {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: flex-start;
+              }
+            </style>
+            <div class="typo-wrap">
+              <div class="typo-ko">
+                <p class="typo-headline1">Headeline 1</p>
+                <p class="typo-headline2">Headeline 2</p>
+                <p class="typo-headline3">Headeline 3</p>
+                <p class="typo-headline4">Headeline 4</p>
+                <p class="typo-headline5">Headeline 5</p>
+                <p class="typo-title1">Title 1</p>
+                <p class="typo-title2">Title 2</p>
+                <p class="typo-title3">Title 3</p>
+                <p class="typo-title4">Title 4</p>
+                <p class="typo-subtitle1">Subtitle 1</p>
+                <p class="typo-subtitle2">Subtitle 2</p>
+                <p class="typo-body1">Body 1</p>
+                <p class="typo-body2">Body 2</p>
+                <p class="typo-body3">Body 3</p>
+                <p class="typo-caption">Caption</p>
+              </div>
+              <div class="typo-en">
+                <p class="typo-display1">Display 1</p>
+                <p class="typo-display2">Display 2</p>
+                <p class="typo-display3">Display 3</p>
+                <p class="typo-display4">Display 4</p>
+                <p class="typo-display5">Display 5</p>
+                <p class="typo-sequeltitle1">SequelTitle 1</p>
+                <p class="typo-sequeltitle3">SequelTitle 3</p>
+                <p class="typo-sequelsans">Sequel Sans</p>
+              </div>
+            </div>
+          </div>
+          <div id="button">
+            <div class="outlined">
+              <details open>
+                <summary>Outlined (a, button tag)</summary>
+                <dl>
+                  <dt>Black Button</dt>
+                  <dd>
+                    <a href="#button" class="button-outline"><span class="txt">Size Large</span></a>
+                    <button type="button" class="button-outline" data-size="s">
+                      <span class="txt">Size Small</span>
+                    </button>
+                  </dd>
+                  <dt>Black Disabled</dt>
+                  <dd>
+                    <button type="button" class="button-outline" disabled>
+                      <span class="txt">Size Large : Disabled</span>
+                    </button>
+                    <button type="button" class="button-outline" data-size="s" disabled>
+                      <span class="txt">Size Samll : Disabled</span>
+                    </button>
+                  </dd>
+                  <dt>White Button</dt>
+                  <dd style="padding: 20px; background-color: #000">
+                    <button type="button" class="button-outline theme-dark">
+                      <span class="txt">Size Large</span>
+                    </button>
+                    <button type="button" class="button-outline theme-dark" data-size="s">
+                      <span class="txt">Size Small</span>
+                    </button>
+                  </dd>
+                  <dt>White Disabled</dt>
+                  <dd style="padding: 20px; background-color: #000">
+                    <button type="button" class="button-outline theme-dark" disabled>
+                      <span class="txt">Size Large : Disabled</span>
+                    </button>
+                    <button type="button" class="button-outline theme-dark" data-size="s" disabled>
+                      <span class="txt">Size Samll : Disabled</span>
+                    </button>
+                  </dd>
+                </dl>
+              </details>
+            </div>
+            <br /><br />
+            <div class="outlined">
+              <details open>
+                <summary>Outlined Trailing icon (a, button tag)</summary>
+                <dl>
+                  <dt>Black Button</dt>
+                  <dd>
+                    <a href="#button" class="button-outline" data-icon="forward"><span class="txt">Size Large</span></a>
+                    <button type="button" class="button-outline" data-icon="forward" data-size="s">
+                      <span class="txt">Size Small</span>
+                    </button>
+                  </dd>
+                  <dt>Black Disabled</dt>
+                  <dd>
+                    <button type="button" class="button-outline" data-icon="forward" disabled>
+                      <span class="txt">Size Large : Disabled</span>
+                    </button>
+                    <button type="button" class="button-outline" data-icon="forward" data-size="s" disabled>
+                      <span class="txt">Size Samll : Disabled</span>
+                    </button>
+                  </dd>
+                  <dt>White Button</dt>
+                  <dd style="padding: 20px; background-color: #000">
+                    <button type="button" class="button-outline theme-dark" data-icon="forward">
+                      <span class="txt">Size Large</span>
+                    </button>
+                    <button type="button" class="button-outline theme-dark" data-icon="forward" data-size="s">
+                      <span class="txt">Size Small</span>
+                    </button>
+                  </dd>
+                  <dt>White Disabled</dt>
+                  <dd style="padding: 20px; background-color: #000">
+                    <button type="button" class="button-outline theme-dark" data-icon="forward" disabled>
+                      <span class="txt">Size Large : Disabled</span>
+                    </button>
+                    <button type="button" class="button-outline theme-dark" data-icon="forward" data-size="s" disabled>
+                      <span class="txt">Size Samll : Disabled</span>
+                    </button>
+                  </dd>
+                </dl>
+              </details>
+            </div>
+            <br /><br />
+            <div class="text">
+              <details open>
+                <summary>Text</summary>
+                <a href="#" target="_blank" class="button-text" data-icon="outline">
+                  <span class="txt">Text buttons</span>
+                </a>
+                <a href="#" target="_blank" class="button-text" data-icon="link">
+                  <span class="txt">Text buttons</span>
+                </a>
+                <button type="button" class="button-text" data-icon="download">
+                  <span class="txt">Text buttons</span>
+                </button>
+                <a href="#" class="button-text" data-underline="true"><span class="txt">Text buttons underline</span></a>
+              </details>
+            </div>
+          </div>
+          <div id="dropdown">
+            <div class="dropdown-wrap">
+              <label for="dropdown-filter" class="blind">목록</label>
+              <select name="filter" id="dropdown-filter">
+                <option value="all">전체</option>
+                <option value="donation">액션기부</option>
+                <option value="video">영상</option>
+              </select>
+            </div>
+
+            <!-- name, id, value 등 값은 임의로 설정 해두었습니다. 
+추후 실 사용이 가능한 값으로 수정이 필요 합니다. -->
+          </div>
+          <div id="textfield">
+            <div class="singleline">
+              <details open>
+                <summary>TextField</summary>
+                <div class="form-item">
+                  <label for="" class="form-label">Input label <em class="required" data-alt="*"><span class="blind">필수 항목입니다.</span></em></label>
+                  <input type="text" placeholder="placeholder text" class="form-text-field" />
+                </div>
+                <div class="form-item">
+                  <label for="" class="form-label">Input label <em class="required" data-alt="*"><span class="blind">필수 항목입니다.</span></em></label>
+                  <input type="text" placeholder="placeholder text" class="form-text-field" disabled />
+                </div>
+                <div class="form-item" data-status="valid">
+                  <label for="" class="form-label">Input label <em class="required" data-alt="*"><span class="blind">필수 항목입니다.</span></em></label>
+                  <input type="text" placeholder="placeholder text" class="form-text-field" />
+                  <p class="form-field-message">Positive Message</p>
+                </div>
+                <div class="form-item" data-status="invalid">
+                  <label for="" class="form-label">Input label <em class="required" data-alt="*"><span class="blind">필수 항목입니다.</span></em></label>
+                  <input type="text" placeholder="placeholder text" class="form-text-field" />
+                  <p class="form-field-message">Error Message</p>
+                </div>
+              </details>
+            </div>
+            <br /><br />
+            <div class="multiline">
+              <details open>
+                <summary>TextArea</summary>
+                <div class="form-item">
+                  <label for="" class="form-label">Input label</label>
+                  <textarea name="" id="" cols="30" rows="10" maxlength="1000" class="form-text-area" placeholder="placeholder text"></textarea>
+                  <p class="form-counter" role="text"><span class="blind">입력 글자 수</span><em>0</em> / 1000</p>
+                </div>
+                <div class="form-item">
+                  <label for="" class="form-label">Input label <em class="required" data-alt="*"><span class="blind">필수 항목입니다.</span></em></label>
+                  <textarea name="" id="" cols="30" rows="10" maxlength="1000" class="form-text-area" placeholder="placeholder text" disabled></textarea>
+                  <p class="form-counter" role="text"><span class="blind">입력 글자 수</span><em>0</em> / 1000</p>
+                </div>
+                <div class="form-item" data-status="valid">
+                  <label for="" class="form-label">Input label <em class="required" data-alt="*"><span class="blind">필수 항목입니다.</span></em></label>
+                  <textarea name="" id="" cols="30" rows="10" class="form-text-area" placeholder="placeholder text"></textarea>
+                  <p class="form-field-message">Positive Message</p>
+                </div>
+                <div class="form-item" data-status="invalid">
+                  <label for="" class="form-label">Input label <em class="required" data-alt="*"><span class="blind">필수 항목입니다.</span></em></label>
+                  <textarea name="" id="" cols="30" rows="10" class="form-text-area" placeholder="placeholder text"></textarea>
+                  <p class="form-field-message">Error Message</p>
+                </div>
+              </details>
+            </div>
+            <br /><br />
+            <details open>
+              <summary>Radio</summary>
+              <h4>- normal</h4>
+              <div class="form-radio">
+                <input type="radio" id="radio1" name="radio" />
+                <label for="radio1" class="form-label"> normal</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" id="radio2" name="radio" checked />
+                <label for="radio2" class="form-label"> selected</label>
+              </div>
+              <h4>- disabled</h4>
+              <div class="form-radio">
+                <input type="radio" id="radio3" name="radio" disabled />
+                <label for="radio3" class="form-label"> disabled</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" id="radio4" name="radio" disabled checked />
+                <label for="radio4" class="form-label"> disabled_selected</label>
+              </div>
+            </details>
+            <br /><br />
+            <details open>
+              <summary>Checkbox</summary>
+              <h4>- normal</h4>
+              <div class="form-check">
+                <input type="checkbox" id="checkbox1" name="checkbox" />
+                <label for="checkbox1" class="form-label"> normal</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="checkbox2" name="checkbox" checked />
+                <label for="checkbox2" class="form-label"> selected</label>
+              </div>
+              <h4>- disabled</h4>
+              <div class="form-check">
+                <input type="checkbox" id="checkbox3" name="checkbox" disabled />
+                <label for="checkbox3" class="form-label"> disabled</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="checkbox4" name="checkbox" disabled checked />
+                <label for="checkbox4" class="form-label"> disabled_selected</label>
+              </div>
+            </details>
+          </div>
+          <div id="title">
+            <style>
+              div[class^='title'] {
+                margin-top: 100px;
+              }
+            </style>
+            <div class="title-date">
+              <div class="page-top">
+                <h1 class="text-title">펠로우를 소개합니다</h1>
+                <p class="text-desc">0000.00.00</p>
+              </div>
+            </div>
+            <div class="title-info">
+              <div class="page-top">
+                <h1 class="text-title">동네마다 쓰레기 덕후들이 있다면, 우리의 싸움도 좀더 즐겁게 변하지 않을까요?</h1>
+                <p class="text-desc fellow"><strong>고금숙 펠로우</strong><span>환경운동가</span></p>
+              </div>
+            </div>
+            <div class="title-writing">
+              <div class="page-top">
+                <h1 class="text-title">펠로우를 소개합니다</h1>
+                <p class="text-desc">오늘도 세상을 보다 선하게 바꾸기 위해 노력하는 혁신가들을 소개합니다</p>
+              </div>
+            </div>
+          </div>
+          <div id="badge">
+            <style>
+              .badge-guide {
+                max-width: 500px;
+                margin: 0 auto;
+              }
+              .badge-guide>div {
+                margin: 50px 0;
+              }
+            </style>
+            <div class="badge-guide">
+              <details open>
+                <summary>Language</summary>
+                <dl>
+                  <dt>White</dt>
+                  <dd>
+                    <button type="button" class="badge-item" data-type="lang">KOR</button>
+                  </dd>
+                  <dt>Black</dt>
+                  <dd>
+                    <button type="button" class="badge-item theme-dark" data-type="lang">KOR</button>
+                  </dd>
+                </dl>
+              </details>
+              <br /><br />
+
+              <!-- <details open>
+		<summary>Badge Detail</summary>
+		<div class="badge-area">
+			<a class="badge-item" target="_blank" href="#">인스타그램</a>
+			<a class="badge-item" target="_blank" href="#">트위터</a>
+			<a class="badge-item" target="_blank" href="#">페이스북</a>
+		</div>
+	</details>
+	<br /><br /> -->
+              <details open>
+                <summary>Badge Fellow</summary>
+                <div class="badge-area">
+                  <span class="badge-item">로컬</span>
+                  <span class="badge-item">다음세대</span>
+                  <span class="badge-item">커뮤니티</span>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div id="listimage">
+            <style>
+              @media (min-width: 1281px) {
+                .card-list {
+                  margin: 0 auto;
+                  width: 100%;
+                  max-width: 936px;
+                }
+                .card-list-person {
+                  margin: 0 auto !important;
+                  max-width: 936px;
+                }
+              }
+              .card-list-person {
+                margin: 48px auto 0;
+              }
+              .card-list-person .img-person-card.type1 {
+                background: #000;
+              }
+            </style>
+            <ul class="card-list">
+              <li class="card-list-item" data-will-change>
+                <a href="/fellowship/intro/season/" class="img-card-item" aria-label="청년들이 지역 안에서 지속가능한 삶을 살아가기 위해서 필요한 것은 무엇일까요?, 유명상 펠로우 협동조합 청풍 대표, #로컬 #다음세대 #커뮤니티">
+                  <div class="img-container img-height-type">
+                    <img class="card-img" src="/assets/images/fellowship/intro/img-intro-fellow_01.jpg" alt="" />
+                  </div>
+                  <div class="card-cont" aria-hidden="true">
+                    <div class="card-badges">
+                      <span class="blind">펠로우 태그</span>
+                      <div class="badge-area">
+                        <span class="badge-item">로컬</span>
+                        <span class="badge-item">다음세대</span>
+                        <span class="badge-item">커뮤니티</span>
+                      </div>
+                    </div>
+
+                    <!-- default값이 text 2줄 말 줄임표고, card-tit에 max-line3클래스를 붙이면 3줄 말 줄임표가 됩니다.-->
+                    <p class="card-tit max-line3">
+                      <strong>청년들이 지역 안에서 지속가능한 삶을 살아가기 위해서 필요한 것은 무엇일까요?</strong>
+                    </p>
+                    <p class="card-writer type-a"><em>유명상 펠로우</em> 협동조합 청풍 대표</p>
+                  </div>
+                </a>
+              </li>
+              <li class="card-list-item" data-will-change>
+                <a href="#" class="img-card-item" aria-label="중증장애인이 동네에서 함께 어우러져 살아가는 세상은 어떤 모습일까요?, 변재원 펠로우 정책연구자, #장애 #사회운동 #정책연구">
+                  <div class="img-container img-height-type">
+                    <img class="card-img" src="/assets/images/fellowship/intro/img-intro-fellow_02.jpg" alt="" />
+                  </div>
+                  <div class="card-cont" aria-hidden="true">
+                    <div class="card-badges">
+                      <span class="blind">펠로우 태그</span>
+                      <div class="badge-area">
+                        <span class="badge-item">장애</span>
+                        <span class="badge-item">사회운동</span>
+                        <span class="badge-item">정책연구</span>
+                      </div>
+                    </div>
+                    <p class="card-tit max-line3">
+                      <strong>중증장애인이 동네에서 함께 어우러져 살아가는 세상은 어떤 모습일까요?</strong>
+                    </p>
+                    <p class="card-writer type-a"><em>변재원 펠로우</em> 정책연구자</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="card-list">
+              <li class="card-list-item" data-will-change>
+                <a href="#" class="img-card-item" aria-label="더 나은 세상을 위한 혁신가 레이블, &#60;카카오임팩트 펠로우십&#62; 시즌 1이 시작됩니다., 세상에 질문을 던지고, 남다른 시선과 고민으로 아무나 갈 수 없는 길을 용기내 걷고 있는 사람들을 소개합니다. 세상에 질문을 던지고, 남다른 시선과 고민으로 아무나 갈 수">
+                  <div class="img-container">
+                    <img class="card-img" src="/assets/images/@temp/img-kakaoimpact-news_01.jpg" alt="" />
+                  </div>
+                  <div class="card-cont" aria-hidden="true">
+                    <p class="card-tit">
+                      <strong>더 나은 세상을 위한 혁신가 레이블, &#60;카카오임팩트 펠로우십&#62; 시즌 1이 시작됩니다.</strong>
+                    </p>
+                    <p class="card-desc">세상에 질문을 던지고, 남다른 시선과 고민으로 아무나 갈 수 없는 길을 용기내 걷고 있는 사람들을 소개합니다. 세상에 질문을 던지고, 남다른 시선과 고민으로 아무나 갈 수</p>
+                  </div>
+                </a>
+              </li>
+              <li class="card-list-item" data-will-change>
+                <a href="#" class="img-card-item" aria-label="더 나은 세상을 위한 혁신가 레이블, 세상에 질문을 던지고, 남다른 시선과">
+                  <div class="img-container">
+                    <img class="card-img" src="/assets/images/@temp/img-kakaoimpact-news_01.jpg" alt="" />
+                  </div>
+                  <div class="card-cont" aria-hidden="true">
+                    <p class="card-tit">
+                      <strong>더 나은 세상을 위한 혁신가 레이블</strong>
+                    </p>
+                    <p class="card-desc">세상에 질문을 던지고, 남다른 시선과</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="card-list">
+              <li class="card-list-item" data-will-change>
+                <a href="#" class="img-card-item" aria-label="닷페이스 5년, 우리가 아직 전하지 못한 이야기, by.닷페이스">
+                  <div class="img-container">
+                    <img class="card-img" src="/assets/images/@temp/story/img-story-05.jpg" alt="" />
+                  </div>
+                  <div class="card-cont" aria-hidden="true">
+                    <p class="card-tit">
+                      <strong>닷페이스 5년, 우리가 아직 전하지 못한 이야기</strong>
+                    </p>
+                    <p class="card-writer type-b"><span>by.</span> 닷페이스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="card-list-item" data-will-change>
+                <a href="#" class="img-card-item" aria-label="쓰레기여행 - 테이크아웃컵을 따라서, by.dawoon chung">
+                  <div class="img-container">
+                    <img class="card-img" src="/assets/images/@temp/story/img-story-07.jpg" alt="" />
+                  </div>
+                  <div class="card-cont" aria-hidden="true">
+                    <p class="card-tit">
+                      <strong>쓰레기여행 - 테이크아웃컵을 따라서</strong>
+                    </p>
+                    <p class="card-writer type-b"><span>by.</span> dawoon chung</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="card-list-person">
+              <li class="card-list-item" data-will-change>
+                <div class="img-person-card type1">
+                  <img class="card-img" src="/assets/images/@temp/img-person-test1.png" alt="" />
+                  <div class="card-cont">
+                    <div class="person-wrap">
+                      <p class="person-name">김범수</p>
+                      <p class="person-pos">이사장 / 카카오의장</p>
+                    </div>
+                    <div class="person-tag-wrap">
+                      <span class="blind">태그</span>
+                      <ul class="person-tags">
+                        <li class="person-tag-item">#소셜임팩트</li>
+                        <li class="person-tag-item">#미래기술</li>
+                      </ul>
+                    </div>
+                    <div class="person-desc">기업가적 사고로 풀 수 있는 사회적 문제가 무엇인지에 관심, 그걸 풀어보고 싶은거죠!</div>
+                  </div>
+                </div>
+              </li>
+              <li class="card-list-item" data-will-change>
+                <div class="img-person-card type1">
+                  <img class="card-img" src="/assets/images/@temp/img-person-test1.png" alt="" />
+                  <div class="card-cont">
+                    <div class="person-wrap">
+                      <p class="person-name">김범수</p>
+                      <p class="person-pos">이사장 / 카카오의장</p>
+                    </div>
+                    <div class="person-tag-wrap">
+                      <span class="blind">태그</span>
+                      <ul class="person-tags">
+                        <li class="person-tag-item">#소셜임팩트</li>
+                        <li class="person-tag-item">#미래기술</li>
+                      </ul>
+                    </div>
+                    <div class="person-desc">기업가적 사고로 풀 수 있는 사회적 문제가 무엇인지에 관심, 그걸 풀어보고 싶은거죠!</div>
+                  </div>
+                </div>
+              </li>
+              <li class="card-list-item" data-will-change>
+                <div class="img-person-card type1">
+                  <img class="card-img" src="/assets/images/@temp/img-person-test1.png" alt="" />
+                  <div class="card-cont">
+                    <div class="person-wrap">
+                      <p class="person-name">김범수</p>
+                      <p class="person-pos">이사장 / 카카오의장</p>
+                    </div>
+                    <div class="person-tag-wrap">
+                      <span class="blind">태그</span>
+                      <ul class="person-tags">
+                        <li class="person-tag-item">#소셜임팩트</li>
+                        <li class="person-tag-item">#미래기술</li>
+                      </ul>
+                    </div>
+                    <div class="person-desc">기업가적 사고로 풀 수 있는 사회적 문제가 무엇인지에 관심, 그걸 풀어보고 싶은거죠!</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="fellow-network-list">
+              <span class="blind">펠로우 리스트</span>
+              <ul class="card-list-person">
+                <li class="card-list-item" data-will-change>
+                  <div class="img-person-card type2">
+                    <img class="card-img" src="/assets/images/@temp/img-person-test2.png" alt="" />
+                    <div class="card-cont">
+                      <p class="person-name"><span class="blind">펠로우 이름</span>김범수</p>
+                      <p class="person-pos"><span class="blind">펠로우 소속</span>카카오임팩트 의장</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-list-item" data-will-change>
+                  <div class="img-person-card type2">
+                    <img class="card-img" src="/assets/images/@temp/network/img-network-fellow_02.png" alt="" />
+                    <div class="card-cont">
+                      <p class="person-name"><span class="blind">펠로우 이름</span>육심나</p>
+                      <p class="person-pos"><span class="blind">펠로우 소속</span>카카오임팩트 사무국장</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-list-item" data-will-change>
+                  <div class="img-person-card type2">
+                    <img class="card-img" src="/assets/images/@temp/network/img-network-fellow_03.png" alt="" />
+                    <div class="card-cont">
+                      <p class="person-name"><span class="blind">펠로우 이름</span>한경수</p>
+                      <p class="person-pos"><span class="blind">펠로우 소속</span>다큐멘터리 PD</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="listtext">
+            <ul class="impact-notice">
+              <li class="notice-list">
+                <a href="#" class="notice-item" aria-label="2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고 2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고, 2020년 03월 19일">
+                  <strong class="notice-tit" aria-hidden="true">2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고 2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고</strong>
+                  <time class="notice-date" datetime="2020-03-19" aria-hidden="true">2020.03.19</time>
+                </a>
+              </li>
+              <li class="notice-list">
+                <a href="#" class="notice-item" aria-label="2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고, 2020년 03월 19일">
+                  <strong class="notice-tit" aria-hidden="true">2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고</strong>
+                  <time class="notice-date" datetime="2020-03-19" aria-hidden="true">2020.03.19</time>
+                </a>
+              </li>
+              <li class="notice-list">
+                <a href="#" class="notice-item" aria-label="2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고 2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고, 2020년 03월 19일">
+                  <strong class="notice-tit" aria-hidden="true">2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고 2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고</strong>
+                  <time class="notice-date" datetime="2020-03-19" aria-hidden="true">2020.03.19</time>
+                </a>
+              </li>
+              <li class="notice-list">
+                <a href="#" class="notice-item" aria-label="2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고, 2020년 03월 19일">
+                  <strong class="notice-tit" aria-hidden="true">2021 카카오임팩트 펠로우십 시즌2 콘텐츠 제작 입찰 공고</strong>
+                  <time class="notice-date" datetime="2020-03-19" aria-hidden="true">2020.03.19</time>
+                </a>
+              </li>
+            </ul>
+            <br /><br />
+            <dl class="fellows-faq">
+              <div class="faq-list">
+                <dt class="faq-q">
+                  <button type="button" class="faq-btn" aria-expanded="false">
+                    <span class="blind">질문</span>
+                    <span><em aria-hidden="true">Q.</em> 몇명이 선정되나요?</span>
+                  </button>
+                </dt>
+                <dd class="faq-a">
+                  <p>
+                    <span class="blind">답변</span>
+                    카카오임팩트 펠로우십은 별도의 필수 활동을 요구하지 않습니다. 사회혁신가가 공익활동을 위한 아젠다에 집중하고, 다양한 시도와 도전을 하실 수 있도록 응원하기 위해서인데요, 그래서 카카오임팩트가
+                    정해놓은 결과물 제출이나 의무사항은 없어요. 펠로우십을 지원받으면서 달성하고 싶은 목표는 펠로우 스스로 정하실 수 있습니다.
+                  </p>
+                </dd>
+              </div type="button">
+              <div class="faq-list">
+                <dt class="faq-q">
+                  <button type="button" class="faq-btn" aria-expanded="false">
+                    <span class="blind">질문</span>
+                    <span><em aria-hidden="true">Q.</em> 몇명이 선정되나요?</span>
+                  </button>
+                </dt>
+                <dd class="faq-a">
+                  <p>
+                    <span class="blind">답변</span>
+                    확성기는 혁신가가 자신의 가치를 대중들에게 알릴 수 있도록 다양한 홍보 채널을 지원하는 프로그램입니다. 카카오 내 외부의 다양한 채널을 활용하여 혁신가들이 자신의 목소리를 내고 지속가능한 활동을
+                    위한 지지기반을 만들 수 있도록 지원하게 됩니다. 예를 들어 카카오같이가치, 브런치, 프로젝트100, 카카오톡 채널 등 다양한 카카오 플랫폼과의 협업이 가능하고, 유튜브 채널 등 다양한 외부 채널과의
+                    협업도 준비 중에 있습니다.
+                  </p>em/dd>
+              </div>
+              <div class="faq-list">
+                <dt class="faq-q">
+                  <button type="button" class="faq-btn" aria-expanded="false">
+                    <span class="blind">질문</span>
+                    <span><em aria-hidden="true">Q.</em> 몇명이 선정되나요?</span>
+                  </button>
+                </dt>
+                <dd class="faq-a">
+                  <p><span class="blind">답변</span>카카오임팩트 펠로우십은 혁신가 생태계에 씨를 뿌리는 작업인 만큼 규모감 있게 진행될 예정입니다. 연 1회 선발이 아닌 시즌제를 통해 지속적으로 선발합니다.</p>
+                </dd>
+              </div>
+              <div class="faq-list">
+                <dt class="faq-q">
+                  <button type="button" class="faq-btn" aria-expanded="false">
+                    <span class="blind">질문</span>
+                    <span><em aria-hidden="true">Q.</em> 몇명이 선정되나요?</span>
+                  </button>
+                </dt>
+                <dd class="faq-a">
+                  <p><span class="blind">답변</span>조직을 성장시키는데, 명확한 역할과 기여도가 있다면, 한 조직에서 여러명이 추천/선정 되는 것도 가능합니다.</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div id="pagination">
+<!-- 
+	* 링크 비활성화 (disabled)
+	- href 속성 삭제
+	- disabled 클래스 추가
+	- aria-disabled="true" 추가
+-->
+            <details open>
+              <summary>First Page</summary>
+              <div class="paging-area">
+                <a class="paging-prev disabled" aria-disabled="true"><span class="blind">이전</span></a>
+                <ol class="pagination" role="list">
+                  <li class="pagination-list" role="listitem"><a class="pagination-item active" aria-disabled="true" aria-current="page">1</a></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">2</a></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">3</a></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">4</a></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">5</a></li>
+                  <li class="pagination-list" role="listitem"><span class="pagination-item">...</span></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">16</a></li>
+                </ol>
+                <a href="#" class="paging-next"><span class="blind">다음</span></a>
+              </div>
+            </details>
+            <br />
+            <details open>
+              <summary>Page in the middle</summary>
+              <div class="paging-area">
+                <a href="#" class="paging-prev"><span class="blind">이전</span></a>
+                <ol class="pagination" role="list">
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">1</a></li>
+                  <li class="pagination-list" role="listitem"><span class="pagination-item">...</span></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">4</a></li>
+                  <li class="pagination-list" role="listitem"><a class="pagination-item active" aria-disabled="true" aria-current="page">5</a></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">6</a></li>
+                  <li class="pagination-list" role="listitem"><span class="pagination-item">...</span></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">16</a></li>
+                </ol>
+                <a href="#" class="paging-next"><span class="blind">다음</span></a>
+              </div>
+            </details>
+            <br />
+            <details open>
+              <summary>Last Page</summary>
+              <div class="paging-area">
+                <a href="#" class="paging-prev"><span class="blind">이전</span></a>
+                <ol class="pagination" role="list">
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">1</a></li>
+                  <li class="pagination-list" role="listitem"><span class="pagination-item">...</span></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">12</a></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">13</a></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">14</a></li>
+                  <li class="pagination-list" role="listitem"><a href="#" class="pagination-item">15</a></li>
+                  <li class="pagination-list" role="listitem"><a class="pagination-item active" aria-disabled="true" aria-current="page">16</a></li>
+                </ol>
+                <a class="paging-next disabled" aria-disabled="true"><span class="blind">다음</span></a>
+              </div>
+            </details>
+          </div>
+          <div id="loadingpage">
+<!--
+  * hide 클래스 추가시 숨겨짐
+-->
+            <div id="loading">
+              <span class="blind">로딩중입니다</span>
+            </div>
+          </div>
+          <div id="utility">
+            <style>
+              .utility-wrap a {
+                font-weight: bold;
+              }
+              .utility-wrap li {
+                list-style: inside;
+                margin: 10px 0;
+              }
+            </style>
+            <div class="utility-wrap">
+              <ul>
+                <li><a href="/maintenance.html" target="_blank">시스템 점검 안내 페이지 - 국문</a></li>
+                <li><a href="/maintenance_en.html" target="_blank">시스템 점검 안내 페이지 - 영문</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="fabButton" type="button"><span class="blind">위로 이동</span></button>
+    <footer id="dsmtFooter">
+      <h2 class="blind">푸터 영역</h2>
+      <div class="footer-inner">
+        <div class="breadcrumb-wrap">
+          <ol class="breadcrumb-list">
+            <li>
+              <a href="/"><span>HOME</span></a>
+            </li>
+          </ol>
+        </div>
+        <div class="sitemap">
+          <div class="sitemap-list">
+            <a class="main-link" href="/fellowship/">펠로우십</a>
+            <ul>
+              <li><a href="/fellowship/intro/">펠로우 소개</a></li>
+              <li><a href="/fellowship/story/">펠로우 스토리</a></li>
+              <li><a href="/fellowship/recommend/">펠로우 추천</a></li>
+              <li><a href="/fellowship/network/">추천 네트워크</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-list">
+            <a class="main-link" href="/together/">같이가치</a>
+          </div>
+          <div class="sitemap-list">
+            <a class="main-link" href="/kakaoimpact/">카카오임팩트</a>
+            <ul>
+              <li><a href="/kakaoimpact/news/">새소식</a></li>
+              <li><a href="/kakaoimpact/notice/">공지사항</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <a class="logo-dsmt" href="/"><span class="blind">DSMT</span></a>
+          <small class="copy-text">Copyright © Kakao Impact Foundation. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/scripts/libs/jquery.min.js"></script>
+    <script src="/assets/scripts/libs/browser-detect.umd.js"></script>
+    <script src="/assets/scripts/libs/gsap.min.js"></script>
+    <script src="/assets/scripts/libs/CustomEase.min.js"></script>
+    <script src="/assets/scripts/libs/ScrollToPlugin.min.js"></script>
+    <script src="/assets/scripts/libs/stickyfill.min.js"></script>
+    <script src="/assets/scripts/libs/intersection-observer.js"></script>
+    <script src="/assets/scripts/common.js"></script>
+    <script>
+      $(function() {
+        const onName = 'cur';
+        $(window).on('load hashchange', function() {
+          const hash = window.location.hash;
+          if (hash) {
+            $('.tab-contents>div').removeClass(onName);
+            $('.tab-contents')
+              .find('>' + hash)
+              .addClass(onName);
+            $('.tab-wrap a').removeClass(onName);
+            $('.tab-wrap a[href="' + hash + '"]').addClass(onName);
+          } else {
+            $('.tab-contents>div').first().addClass(onName);
+            $('.tab-wrap a').first().addClass(onName);
+          }
+        });
+        faqBtn();
+        // 아래 소스를 추가 하면 드롭다운 메뉴의 값이 바뀌는 시기에 대한 이벤트를 감지 할 수 있습니다.
+        $('#dropdown-filter').on('change', function() {
+          console.log($(this).val());
+        });
+      });
+    </script>
+  </body>
+</html>
