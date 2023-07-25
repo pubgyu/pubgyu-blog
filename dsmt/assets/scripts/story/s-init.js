@@ -101,7 +101,8 @@ startLottie.addEventListener("DOMLoaded", function () {
   }
   function loadAnimation() {
     startLottie.goToAndStop(ff, true);
-    if (ff <= loadFrame) {
+    // if (ff <= loadFrame) {
+    if (ff <= 90) {
       if (window.innerWidth > 767) {
         ff += .3;
       } else {
