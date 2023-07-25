@@ -64,7 +64,7 @@ window.STORY = {
       rendererSettings: {
         className: 'scroll-induce-svg'
       },
-      path: '../assets/json/story/scrollAffordance.json'
+      path: './assets/json/story/scrollAffordance.json'
     });
     document.querySelector('.scroll-induce-wrap').style.opacity = 1;
   },
